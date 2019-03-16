@@ -29,6 +29,8 @@ public class Statistic {
             if(number != -999) inputs.add(number);
 
         }while(number != -999);
+
+        keyboard.close();
     }
 
     private   void calculateMin(){

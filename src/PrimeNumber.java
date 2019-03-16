@@ -19,22 +19,24 @@ public class PrimeNumber {
 	}
 	
 	public void calPrime(){
-	    	//Calculate primes
-			primeThread = new Thread();
-	    	for (int x = 2; x <= input ; x++){
-	    		for (int j = 2; j<=x;j++)
-	    		{
-	    			if (j==x)
-	    				
-	    			{
-	    				System.out.println(x);
-	    		}    				
-					if (x % j == 0)
+		//Calculate primes
+		primeThread = new Thread(() -> {
+			for (int x = 2; x <= input ; x++){
+				for (int j = 2; j<=x;j++)
 				{
-					break;
+					if (j==x)
+
+					{
+						System.out.print(x + " ");
+					}
+					if (x % j == 0)
+					{
+						break;
+					}
 				}
-				}
-	    	};primeThread.start();}
+			}
+		});primeThread.start();
+	}
 	
 	public void getPrime(){
 		calPrime();
@@ -42,24 +44,13 @@ public class PrimeNumber {
 		try{
 			primeThread.join();
 		}
-			
-		catch (InterruptedException e) {
-            e.printStackTrace();}}
-            
-		
-	public void displayResult(){
-		System.out.println("Your input was ");
-		System.out.println();
-		System.out.println("The Prime numbers are :");
+		catch (InterruptedException e) { e.printStackTrace();}
 	}
-	          
-	        
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		 PrimeNumber primeObject = new PrimeNumber();
 		 primeObject.getInputs();
 		 primeObject.getPrime();
-		 
-		
-}
+	}
 }
