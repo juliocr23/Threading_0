@@ -1,3 +1,12 @@
+/**
+ * FibSeq.java
+ *
+ * Group: Julio Rosario
+ *        Jeson Rosario
+ *        Ryan Wilson
+ *        Lisa D. Smith
+ */
+
 import java.util.*;
 
 public class FibSeq implements Runnable {

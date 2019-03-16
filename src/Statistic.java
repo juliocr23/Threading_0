@@ -1,3 +1,13 @@
+/**
+ * Statistic.java
+ *
+ * Group: Julio Rosario
+ *        Jeson Rosario
+ *        Ryan Wilson
+ *        Lisa D. Smith
+ */
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
